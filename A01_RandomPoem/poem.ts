@@ -12,8 +12,14 @@ let prädikat: string [] = [  "braut, liebt, studiert, hasst, zaubert, zerstört
 let objekt: string [] = [  "Zaubertränke, den Grimm, Lupin, Hogwarts, die Karte des Rumtreibers, Dementoren "];
 
 //for schleife//
-for (num=1; num<=10; num++)  {  
-    console.log(num); 
-    }
 
-function get
+console.log("hello")
+
+for ((let index: number = 5; index >= 1; index--))  {  
+    console.log(getVerse); 
+    }
+//funktion die Vers erstellt//
+function getVerse():string{
+    let subjektNumber: number = Math.floor(Math.random() * _subjects.length);
+    let prädikatNumber: number = Math.floor(Math.random() * _verbs.length);
+    let objektNumber: number = Math.floor(Math.random() * _objects.length);}
