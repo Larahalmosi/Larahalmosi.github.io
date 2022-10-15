@@ -15,3 +15,5 @@ let objekt: string [] = [  "Zaubertränke, den Grimm, Lupin, Hogwarts, die Karte
 for (num=1; num<=10; num++)  {  
     console.log(num); 
     }
+
+function get
