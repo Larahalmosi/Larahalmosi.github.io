@@ -7,9 +7,9 @@ Quellen: <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du di
 */
 //Array//
 
-let subjekt: string [] = [  "Harry ",  "Hermine ",  "Ron ",  "Hagrid ",  "Snape ",  "Dumbledore "];
-let prädikat: string [] = [  "braut, liebt, studiert, hasst, zaubert, zerstört"];
-let objekt: string [] = [  "Zaubertränke, den Grimm, Lupin, Hogwarts, die Karte des Rumtreibers, Dementoren "];
+let subject: string [] = [  "Harry ",  "Hermine ",  "Ron ",  "Hagrid ",  "Snape ",  "Dumbledore "];
+let predicate: string [] = [  "braut, liebt, studiert, hasst, zaubert, zerstört"];
+let object: string [] = [  "Zaubertränke, den Grimm, Lupin, Hogwarts, die Karte des Rumtreibers, Dementoren "];
 
 //for schleife//
 
