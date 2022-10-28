@@ -1,0 +1,36 @@
+body{
+    background: black;
+}
+
+h1 {font-family: 'Courier New', Courier, monospace;
+        text-align: center; 
+        color: #ffffff;
+        font-size: 30px;
+        margin-top: 30px;
+       
+    }
+
+    .rainbow-text {
+        animation-duration: 3.115s;
+       }
+       
+       .rainbow-text {
+        background: linear-gradient(53.13deg,#FFD33D 0,#FB8532 16.02%,#EA4A5A 28.06%,#8A63D2 56.92%,#2188FF 72.93%,#34D058 84%,#FFD33D 100%);
+        background-size: auto;
+        background-clip: border-box;
+        background-clip: text;
+        display: inline-block;
+        color: transparent;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 6.28s alternate infinite;
+        animation-duration: 6.28s;
+        background-size: 300%;
+       margin-left: 15%;
+       }
+
+       input{
+    align-items: center;
+    margin-left: 20%;
+       }
