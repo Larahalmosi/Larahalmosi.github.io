@@ -10,12 +10,22 @@ body{
 span{
     position: fixed;
     offset: right, below ;
+    color: #fff200 ;
+    background-color: #606261;
+    width: auto;
+    height: 80px;
+    border-style:solid;
+    border-radius: 4px;
+    border-color:#fff200 ;
+    border-width: 6px;
+
 }
 button{background-color: #1b076c;
 color: #8e8eb5;
 font-family: Verdana;
 border-radius: 10px;
 border: 2px solid #3866A3;
+
 }
 button:hover {
     color: #ffffff ;
