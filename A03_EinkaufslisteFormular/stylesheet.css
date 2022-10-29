@@ -30,6 +30,17 @@ h1 {font-family: 'Courier New', Courier, monospace;
         background-size: 300%;
        margin-left: 15%;
        }
+       @keyframes shine {
+        0% {
+         background-position:200% center
+        }
+        62.8% {
+         background-position:100% center
+        }
+        100% {
+         background-position:200% center
+        }
+       }
 
        input{
     align-items: center;
