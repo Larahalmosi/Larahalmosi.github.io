@@ -27,6 +27,9 @@ function list(): void {
 
 }
 
+/*function Datum*/
+
+
 
 /*console log item hinzufügen*/
 function add(): void {
