@@ -62,8 +62,14 @@ function edit(): void {
     console.log("falls sich etwas ändert");
 }
 
+/*item hinzufügen*/
 
-
+function generateContent {
+    let food;
+    let amount;
+    let comment;
+    let date
+}
 
 
 

@@ -47,5 +47,12 @@ var Einkaufsliste_Formular;
     function edit() {
         console.log("falls sich etwas ändert");
     }
+    /*item hinzufügen*/
+    function generateContent() {
+        let food;
+        let amount;
+        let comment;
+        let date;
+    }
 })(Einkaufsliste_Formular || (Einkaufsliste_Formular = {}));
 //# sourceMappingURL=EinkaufslisteFormular.js.map

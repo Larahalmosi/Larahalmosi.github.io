@@ -10,10 +10,10 @@ var Einkaufsliste_Formular;
 (function (Einkaufsliste_Formular) {
     Einkaufsliste_Formular.data = {
         food: [
-            { food: "Relic", amount: 300, comment: "zwei" }
+            { food: "Zucchini", amount: 300, comment: "zwei" }
         ],
         amount: [
-            { food: "Red pill ", amount: 20, comment: "Realität" }
+            { food: "Vodka ", amount: 20, comment: "shots,shots,shots" }
         ]
     };
 })(Einkaufsliste_Formular || (Einkaufsliste_Formular = {}));
