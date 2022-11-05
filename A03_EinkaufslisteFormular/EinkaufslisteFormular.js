@@ -16,10 +16,20 @@ var Einkaufsliste_Formular;
         let deleteButton = document.querySelector("#trash");
         let checkboxButton = document.querySelector(".checkbox");
         let editButton = document.querySelector("#edit");
+        let createdateauto = document.querySelector("#date");
         addButton.addEventListener("click", add);
         deleteButton.addEventListener("click", trash);
         checkboxButton.addEventListener("click", check);
         editButton.addEventListener("click", edit);
+        createdateauto.addEventListener("click", createdatenew);
+    }
+    /*function Datum*/
+    function createdatenew() {
+        let date = new Date();
+        let day = date.getDay();
+        let month = date.getMonth();
+        let year = date.getFullYear();
+        console.log("Current Date: " + day + ":" + month + ":" + year);
     }
     /*console log item hinzufügen*/
     function add() {

@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="EinkaufslisteFormular.js" ></script>
+    <script src="datastructure.js" ></script>
 </head>
+<div class="container">
 <body>
+    
     <h1 class="rainbow-text">Shopping List</h1>
     <br>
-    <input type="text" placeholder="food and stuff"></input>
-    <input type="text" placeholder="quantity"></input>
+<form id="createlistitem">
+    <input type="text" placeholder="food" id="food"></input>
+    <input type="text" placeholder="quantity" id="amount"></input>
     <input type="text" placeholder="comment"></input>
-    <input type="text" placeholder="date" id="date"></input>
+    <p  id="date">Date</p>
+</form>
     <button id="add">ADD</button>
     <div class="testitem">
            <input type="checkbox" class="checkbox"></input>
             <p>Relic</p>
             <p>300 sec</p>
-            <P>vorsicht: Nebenwirkungen</P>
+            <p>vorsicht: Nebenwirkungen</p>
             <p>20.07.2077</p>
             <i class="far fa-edit" id="edit"></i>
             <i class="fas fa-trash-alt" id="trash"></i>
@@ -35,7 +40,10 @@
          <i class="far fa-edit" id="edit"></i>
          <i class="fas fa-trash-alt" id="trash"></i>
  </div>
+ <footer>
     <a href="use_case_diagram.jpg">Use-case-case Diagram</a>
     <a href="UI_scribble.jpg">UI_scribble</a>
 </body>
+</footer>
+</div>
 </html>
