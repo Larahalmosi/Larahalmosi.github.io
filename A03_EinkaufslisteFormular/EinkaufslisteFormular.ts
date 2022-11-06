@@ -64,11 +64,30 @@ function edit(): void {
 
 /*item hinzufügen*/
 
-function generateContent {
-    let food;
-    let amount;
-    let comment;
-    let date
+function HandleButtons(): void {
+    let checkedTask: boolean = false;
+    let input: string = document.querySelector("input").value;
+    let shoppinglist: any = document.getElementById("shoppinglist");
+    let createItem: any = document.createElement("p");
+    let newItem: any = document.createElement("li");
+    var createCheckIcon: any = document.createElement("i");
+    var createDelIcon: any = document.createElement("i");
+    shoppinglist.appendChild(newItem);
+    newItem.appendChild(createCheckIcon);
+    createCheckIcon.classList.add("fas", "fa-square");
+    createCheckIcon.setAttribute("id", "check");
+    newItem.appendChild(createItem);
+    createItem.innerHTML = input;
+    newItem.appendChild(createDelIcon);
+    createDelIcon.classList.add("fas", "fa-trash-alt");
+
+ 
+
+    //Funktionen Icons//
+    createCheckIcon.addEventListener("click", function(): void {if (!checkedTask) {createCheckIcon.setAttribute("class", "fas fa-check-square"); checkedTask = true;  } 
+    else {createCheckIcon.setAttribute("class", "fas fa-square"); }});
+    createDelIcon.addEventListener("click", function(): void { shoppinglist.removeChild (newItem); });
+}
 }
 
 

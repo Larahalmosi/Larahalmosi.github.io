@@ -6,14 +6,14 @@ Datum: <05.11.2022>
 Quellen: Arthur Aguiar Rafael
 */
 namespace Einkaufsliste_Formular {
-    export interface ListItem {
+    export interface HandleLoad {
         food: string;
         amount: number;
         comment: string;
 
     }
     export interface Item {
-        [category: string]: ListItem[];
+        [category: string]: HandleLoad[];
     }
     export let data: Item = {
         food: [
