@@ -6,24 +6,24 @@ Datum: <05.11.2022>
 Quellen: Arthur Aguiar Rafael
 */
 namespace Einkaufsliste_Formular {
-    export interface HandleLoad {
+    export interface HandleItemBuild {
         food: string;
         amount: number;
         comment: string;
 
     }
-    export interface Item {
-        [category: string]: HandleLoad[];
+    export interface Data {
+        [category: string]: HandleItemBuild[];
     }
-    export let data: Item = {
-        food: [
-            { food: "Zucchini", amount: 300,  comment: "zwei" }
-        ],
-        amount: [
-            { food: "Vodka ", amount: 20 , comment: "shots,shots,shots" }
-        ]
+    export let data: Data = {
+         
+    { food: "Zucchini", amount: 300,  comment: "zwei", date:"15.11.2022" }
+    ;
+    
+    { food: "Vodka ", amount: 20 , comment: "shots,shots,shots",date:"16.11.2022" }
+        
 
 
 
-    };
+    }
 }

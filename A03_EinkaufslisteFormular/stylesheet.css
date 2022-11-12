@@ -1,10 +1,10 @@
 #container{
 width: 375px;
 height: 667px;
-background: black;
+background-color: black;
 }
 body{
-    background-color: rgb(208, 206, 206);
+    background-color: rgb(8, 59, 94);
     font-family:'Courier New', Courier, monospace;
     width: 375px;
     height: 667px;
@@ -45,12 +45,11 @@ i{color: #000000;
         animation-duration: 3.115s;
        }
        
-       .rainbow-text {
+    .rainbow-text {
         background: linear-gradient(53.13deg,#FFD33D 0,#FB8532 16.02%,#EA4A5A 28.06%,#8A63D2 56.92%,#2188FF 72.93%,#34D058 84%,#FFD33D 100%);
         background-size: auto;
         background-clip: border-box;
         background-clip: text;
-        display: inline-block;
         color: transparent;
         text-fill-color: transparent;
         -webkit-background-clip: text;
@@ -58,7 +57,7 @@ i{color: #000000;
         animation: shine 6.28s alternate infinite;
         animation-duration: 6.28s;
         background-size: 300%;
-       margin-left: 35%;
+        text-align: center;
        }
        
        @keyframes shine {
@@ -76,15 +75,21 @@ i{color: #000000;
     input{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    background-color: #FFD33D;
     width: 100px;
     margin: 10px;
     font-size: 14px;
     padding: 14px 18px;
     border-width: 2px;
     border-style: solid;
+    border-radius: 8px;
     position: relative;
        }
-    button{font-family: 'Courier New', Courier, monospace;}
+    button{font-family: 'Courier New', Courier, monospace;
+        width: auto;
+        height: 30px;
+        border-radius: 8px;
+    }
        .checkbox{
         text-align: left;
         width: 20px;
@@ -95,7 +100,7 @@ i{color: #000000;
         position: relative;
     }
    button:hover{
-        background-color: #383838;
+        background-color: #f59b00;
     }
     div .tasklist{
         position: absolute;
@@ -119,4 +124,13 @@ i{color: #000000;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
-    margin-top: 40px;}
+    margin-top: 40px;
+    border-radius: 8px;}
+    p{
+        font-size: 10px;
+    }
+    footer{
+        bottom: 0;
+        position: absolute;
+
+    }

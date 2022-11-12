@@ -2,8 +2,8 @@
 Aufgabe: <L03_EinkaufslisteFormular>
 Name: <Lara Sophia Elisabeth Halmosi>
 Matrikel: <271343>
-Datum: <22.10.2022>
-Quellen: <inspiriert von Alina Stumpf>
+Datum: <12.11.2022>
+Quellen: <inspiriert von Aanya Khetarpal>
 */
 
 namespace Einkaufsliste_Formular {
@@ -11,6 +11,13 @@ namespace Einkaufsliste_Formular {
 /*listener*/
 
 window.addEventListener("load", list);
+
+ /*add button clicked*/
+window.addEventListener("load", function(): void {
+    document.querySelector("input").addEventListener("click", (event) => { if (event.button) { if (document.querySelector("input").value != "") { createItem(); document.querySelector("input").value = ""; } else {alert("Error 271: Must not be empty!"); }}});
+
+});
+
 
 /*function list*/
 
@@ -28,17 +35,6 @@ function list(): void {
     createdateauto.addEventListener("click", createdatenew);
 
 }
-
-/*function Datum*/
-function createdatenew (): void {
-    let date = new Date();
-    let day = date.getDay();
-    let month = date.getMonth();
-    let year = date.getFullYear();
-    console.log("Current Date: " + day + ":" + month + ":" + year);     
-}
-
-
 
 
 /*console log item hinzufügen*/
@@ -62,14 +58,26 @@ function edit(): void {
     console.log("falls sich etwas ändert");
 }
 
-/*item hinzufügen*/
 
-function HandleButtons(): void {
+
+// Funktion die beim add-button ein list-element hinzufügt//
+function HandleADD(): void {
+
+    //get input value and create ist element//
     let checkedTask: boolean = false;
     let input: string = document.querySelector("input").value;
     let shoppinglist: any = document.getElementById("shoppinglist");
     let createItem: any = document.createElement("p");
     let newItem: any = document.createElement("li");
+
+    //get Date//
+    let date = new Date();
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    console.log("Current Date: " + day + ":" + month + ":" + year); 
+
+    //create button,edit, delete//
     var createCheckIcon: any = document.createElement("i");
     var createDelIcon: any = document.createElement("i");
     shoppinglist.appendChild(newItem);
@@ -79,17 +87,32 @@ function HandleButtons(): void {
     newItem.appendChild(createItem);
     createItem.innerHTML = input;
     newItem.appendChild(createDelIcon);
+
+    //Listener buttons//
     createDelIcon.classList.add("fas", "fa-trash-alt");
-
- 
-
-    //Funktionen Icons//
     createCheckIcon.addEventListener("click", function(): void {if (!checkedTask) {createCheckIcon.setAttribute("class", "fas fa-check-square"); checkedTask = true;  } 
     else {createCheckIcon.setAttribute("class", "fas fa-square"); }});
     createDelIcon.addEventListener("click", function(): void { shoppinglist.removeChild (newItem); });
-}
-}
+    
 
+
+}
+//checkitem//
+function{}
+//editItem//
+function{}
+//deleteItem//
+function{}
+//asynch client//
+
+async function changeList() {
+    let value = await promise;
+    let formData: FormData = new FormData(document.forms[0]);
+    let query:URLSearchParams =new URLSearchParams(formData);
+    await fetch ("Einkaufsliste.html"+ query.toString);
+    alert("received your Message!");
+    
+}
 
 
 
