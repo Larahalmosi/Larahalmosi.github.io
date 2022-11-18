@@ -76,40 +76,41 @@ function handleADD(): void {
     let listtask: HTMLElement = <HTMLElement>document.querySelector(".tasklist");
     listtask.appendChild(div);
     
-    trash.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    trash.innerHTML = "<i class=\"fa-solid fa-trash\"></i>";
     checked.type = "checkbox";
 
-    label.innerHTML += inputValue.name + ", " + amountValue.value + ", " + commentValue.value + ", ";
-    dateValue.innerHTML += "Zuletzt gekauft am: " + dateValue.value;
-    dateValue.classList.add("dateString");
-    div.appendChild(checked, trash, label, date);
-
-    //get Date//
+//get Date//
     let date = new Date();
     let day = date.getDay();
-    let month = date.getMonth();
+    let month: number = date.getMonth();
     let year = date.getFullYear();
     console.log("Current Date: " + day + ":" + month + ":" + year); 
 
-    //create check,edit, delete//
+//create check,edit, delete//
     let createCheckIcon: HTMLElement = document.createElement("i");
     let createDelIcon: HTMLElement = document.createElement("i");
     let createEditIcon: HTMLElement = document.createElement("i");
+    let newItem: HTMLElement = document.createElement("p");
+    let shoppinglist: HTMLElement = <HTMLElement>document.querySelector(".testitem");
+
+
+    label.innerHTML += inputValue.name + ", " + amountValue.value + ", " + commentValue.value +  day  + month +  year ;
+    dateValue.innerHTML += "Zuletzt gekauft am: " + dateValue.value;
+    dateValue.classList.add("dateString");
+    div.appendChild(createCheckIcon);
+    div.appendChild(createDelIcon);
+    div.appendChild(createEditIcon);
+    div.appendChild(label);
 
     shoppinglist.appendChild(label);
-    newItem.appendChild(createCheckIcon);
-    createCheckIcon.classList.add("fas", "fa-square");
-    createCheckIcon.setAttribute("id", "check");
-    newItem.appendChild(createItem);
-    createItem.innerHTML = input;
-    newItem.appendChild(createDelIcon);
+  
 
-    //Listener buttons//
+//Listener buttons//
     createDelIcon.classList.add("fas", "fa-trash-alt");
     createCheckIcon.addEventListener("pointer-down", function(): void {if (!checkedTask) {createCheckIcon.setAttribute("class", "fas fa-check-square"); checkedTask = true;  } 
     else {createCheckIcon.setAttribute("pointer-down", "fas fa-square"); }});
     createDelIcon.addEventListener("pointer-down", function(): void { shoppinglist.removeChild (newItem); });
-    createItem.addEventListener{"pointer-down"}
+    createItem.addEventListener; {"pointer-down"; }
 
 
 }

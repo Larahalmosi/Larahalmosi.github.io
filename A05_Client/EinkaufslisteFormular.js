@@ -64,12 +64,8 @@ var Einkaufsliste_Formular;
         let checked = document.createElement("input");
         let listtask = document.querySelector(".tasklist");
         listtask.appendChild(div);
-        trash.innerHTML = '<i class="fa-solid fa-trash"></i>';
+        trash.innerHTML = "<i class=\"fa-solid fa-trash\"></i>";
         checked.type = "checkbox";
-        label.innerHTML += inputValue.name + ", " + amountValue.value + ", " + commentValue.value + ", ";
-        dateValue.innerHTML += "Zuletzt gekauft am: " + dateValue.value;
-        dateValue.classList.add("dateString");
-        div.appendChild(checked, trash, label, date);
         //get Date//
         let date = new Date();
         let day = date.getDay();
@@ -80,13 +76,16 @@ var Einkaufsliste_Formular;
         let createCheckIcon = document.createElement("i");
         let createDelIcon = document.createElement("i");
         let createEditIcon = document.createElement("i");
+        let newItem = document.createElement("p");
+        let shoppinglist = document.querySelector(".testitem");
+        label.innerHTML += inputValue.name + ", " + amountValue.value + ", " + commentValue.value + day + month + year;
+        dateValue.innerHTML += "Zuletzt gekauft am: " + dateValue.value;
+        dateValue.classList.add("dateString");
+        div.appendChild(createCheckIcon);
+        div.appendChild(createDelIcon);
+        div.appendChild(createEditIcon);
+        div.appendChild(label);
         shoppinglist.appendChild(label);
-        newItem.appendChild(createCheckIcon);
-        createCheckIcon.classList.add("fas", "fa-square");
-        createCheckIcon.setAttribute("id", "check");
-        newItem.appendChild(createItem);
-        createItem.innerHTML = input;
-        newItem.appendChild(createDelIcon);
         //Listener buttons//
         createDelIcon.classList.add("fas", "fa-trash-alt");
         createCheckIcon.addEventListener("pointer-down", function () {
