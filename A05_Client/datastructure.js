@@ -8,14 +8,13 @@ Quellen: Arthur Aguiar Rafael
 */
 var Einkaufsliste_Formular;
 (function (Einkaufsliste_Formular) {
-    Einkaufsliste_Formular.data = {};
+    Einkaufsliste_Formular.data = [];
     {
         food: "Zucchini", amount;
         300, comment;
         "zwei", date;
         "15.11.2022";
     }
-    ;
     {
         food: "Vodka ", amount;
         20, comment;

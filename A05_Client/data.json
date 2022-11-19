@@ -1,0 +1,26 @@
+{
+
+    "entry": [{
+                    "name": "Apfel",
+                    "amount": 50,
+                    "comment":"für Dornröschen",
+                    "check": true,
+                    "date": "23.09.2022"
+                },
+                {
+                    "name": "Kartoffel",
+                    "amount": 139,
+                    "comment": "Fladoffsche",
+                    "check": false,
+                    "date": "06.02.2022"
+                },
+                {
+                    "name": "Mango",
+                    "amount": 9,
+                    "comment": "Gemüse?",
+                    "check": false,
+                    "date": "05.11.2022"
+                }
+            ]
+        }
+    
