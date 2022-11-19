@@ -16,7 +16,7 @@ window.addEventListener("load", handleLoad );
 
 /*function list*/
 
-function handleLoad(): void {
+function handleLoad(_event: Event): void {
     let addButton: HTMLElement = <HTMLElement>document.querySelector("#add");
     let checkboxButton: HTMLElement = <HTMLElement>document.querySelector("#checkbox");
     if (addButton != null) { addButton.addEventListener("pointer-down", handleADD); }
@@ -51,7 +51,7 @@ function edit(): void {
 
 
 // Funktion die beim add-button ein list-element hinzufügt//
-function handleADD(): void {
+function handleADD(_event: Event): void {
    
     //form data auswerten//
     let formData = new FormData(document.forms[0]);
@@ -115,21 +115,24 @@ function handleADD(): void {
 
 }
 //checkitem//
-function{if (checkedTask){}
+//function{if (checkedTask){}
 }
 //editItem//
 function{}
 //deleteItem//
+
 function deleteItem(_event: MouseEvent): void {
 
     let x: string = (_event.target as Element).id;
-    let outputElementId: HTMLElement = document.getElementById(x);
+    let outputElementId: HTMLElement = <HTMLElement> document.getElementById(x);
     let editElementId: HTMLElement = document.getElementById("edit" + x);
     let checkboxElementId: HTMLElement = document.getElementById("checkbox" + x);
     checkboxElementId.remove();
     outputElementId.remove();
     editElementId.remove();
 }
+
+
 //asynch client//
 
 async function changeList() {
@@ -140,7 +143,7 @@ async function changeList() {
     alert("received your Message!");
     
 }
-
+//
 
 
 

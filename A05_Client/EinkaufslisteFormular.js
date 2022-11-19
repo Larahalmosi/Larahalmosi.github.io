@@ -12,7 +12,7 @@ var Einkaufsliste_Formular;
     /*add button clicked*/
     window.addEventListener("load", handleLoad);
     /*function list*/
-    function handleLoad() {
+    function handleLoad(_event) {
         let addButton = document.querySelector("#add");
         let checkboxButton = document.querySelector("#checkbox");
         if (addButton != null) {
@@ -46,7 +46,7 @@ var Einkaufsliste_Formular;
         console.log("falls sich etwas ändert");
     }
     // Funktion die beim add-button ein list-element hinzufügt//
-    function handleADD() {
+    function handleADD(_event) {
         //form data auswerten//
         let formData = new FormData(document.forms[0]);
         formData.append("grocery", "amount", "comment");
@@ -104,28 +104,26 @@ var Einkaufsliste_Formular;
         }
     }
     //checkitem//
-    function () {
-        if (checkedTask) { }
-    }
-    //editItem//
-    function () { }
-    //deleteItem//
-    function deleteItem(_event) {
-        let x = _event.target.id;
-        let outputElementId = document.getElementById(x);
-        let editElementId = document.getElementById("edit" + x);
-        let checkboxElementId = document.getElementById("checkbox" + x);
-        checkboxElementId.remove();
-        outputElementId.remove();
-        editElementId.remove();
-    }
-    //asynch client//
-    async function changeList() {
-        let value = await promise;
-        let formData = new FormData(document.forms[0]);
-        let query = new URLSearchParams(formData);
-        await fetch("Einkaufsliste.html" + query.toString);
-        alert("received your Message!");
-    }
+    //function{if (checkedTask){}
 })(Einkaufsliste_Formular || (Einkaufsliste_Formular = {}));
+//editItem//
+function () { }
+//deleteItem//
+function deleteItem(_event) {
+    let x = _event.target.id;
+    let outputElementId = document.getElementById(x);
+    let editElementId = document.getElementById("edit" + x);
+    let checkboxElementId = document.getElementById("checkbox" + x);
+    checkboxElementId.remove();
+    outputElementId.remove();
+    editElementId.remove();
+}
+//asynch client//
+async function changeList() {
+    let value = await promise;
+    let formData = new FormData(document.forms[0]);
+    let query = new URLSearchParams(formData);
+    await fetch("Einkaufsliste.html" + query.toString);
+    alert("received your Message!");
+}
 //# sourceMappingURL=EinkaufslisteFormular.js.map
