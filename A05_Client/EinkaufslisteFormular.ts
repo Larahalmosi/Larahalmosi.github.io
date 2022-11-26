@@ -20,30 +20,26 @@ function handleLoad(_event: Event): void {
     let addButton: HTMLElement = <HTMLElement>document.querySelector("#add");
     let checkboxButton: HTMLElement = <HTMLElement>document.querySelector("#checkbox");
     if (addButton != null) { addButton.addEventListener("pointer-down", handleADD); }
-   else {console.log("error"); }
-    if (checkboxButton != null) { checkboxButton.addEventListener("pointer-down", handleADD); }
-   else {console.log("error"); }
-    checkboxButton.addEventListener("pointer-down", check);
-}
+ 
 
 
 /*console log item hinzufügen*/
-function add(): void {
+    function add(): void {
 
     console.log("fügt etwas hinzu");
 }
 /*console log item wegschmeißen */
-function trash(): void {
+    function trash(): void {
 
     console.log("weg damit");
 }
 /*console log item eingekauft */
-function check(): void {
+    function check(): void {
 
     console.log("item eingekauft");
 }
 /*console log bearbeiten */
-function edit(): void {
+    function edit(): void {
 
     console.log("falls sich etwas ändert");
 }
@@ -51,7 +47,7 @@ function edit(): void {
 
 
 // Funktion die beim add-button ein list-element hinzufügt//
-function handleADD(_event: Event): void {
+    function handleADD(_event: Event): void {
    
     //form data auswerten//
     let formData = new FormData(document.forms[0]);
@@ -106,36 +102,29 @@ function handleADD(_event: Event): void {
   
 
 //Listener buttons//
-    createDelIcon.classList.add("fas", "fa-trash-alt");
-    createCheckIcon.addEventListener("pointer-down", function(): void {if (!checkedTask) {createCheckIcon.setAttribute("class", "fas fa-check-square"); checkedTask = true;  } 
-    else {createCheckIcon.setAttribute("pointer-down", "fas fa-square"); }});
-    createDelIcon.addEventListener("pointer-down", function(): void { shoppinglist.removeChild (newItem); });
-    createItem.addEventListener; {"pointer-down"; }
+  
+    document.addEventListener("pointerdown",label);
 
 
 }
 //checkitem//
-//function{if (checkedTask){}
-}
+
+
+
+
 //editItem//
-function{}
+    function{}
 //deleteItem//
 
-function deleteItem(_event: MouseEvent): void {
+    function deleteItem(_event: Event): void {
 
-    let x: string = (_event.target as Element).id;
-    let outputElementId: HTMLElement = <HTMLElement> document.getElementById(x);
-    let editElementId: HTMLElement = document.getElementById("edit" + x);
-    let checkboxElementId: HTMLElement = document.getElementById("checkbox" + x);
-    checkboxElementId.remove();
-    outputElementId.remove();
-    editElementId.remove();
+    inputValue.parentElement.remove();
 }
 
 
 //asynch client//
 
-async function changeList() {
+    async function changeList(_event: Event) {
     let value = await promise;
     let formData: FormData = new FormData(document.forms[0]);
     let query: URLSearchParams = new URLSearchParams(formData);
@@ -143,8 +132,6 @@ async function changeList() {
     alert("received your Message!");
     
 }
-//
 
 
 
-}
