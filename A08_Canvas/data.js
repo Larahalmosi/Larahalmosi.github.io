@@ -3,7 +3,7 @@
 Aufgabe: <L08_Einkaufsliste_Datenstruktur>
 Name: <Lara Sophia Elisabeth Halmosi>
 Matrikel: <271343>
-Datum: <264.11.2022>
+Datum: <04.12.2022>
 Quellen:
 */
 var Canvas;
@@ -36,7 +36,7 @@ var Canvas;
     function cirkel() {
         crc2.beginPath();
         crc2.arc(randomnumber(), randomnumber(), randomnumber(), randomnumber(), 1.5 * Math.PI);
-        crc2.strokeStyle = ("yellow");
+        crc2.fillStyle = "RGB(" + randomcolor + +randomcolor + randomcolor + ")";
         crc2.stroke();
         crc2.closePath();
     }
@@ -45,7 +45,7 @@ var Canvas;
     function ellipse() {
         crc2.beginPath();
         crc2.ellipse(randomnumber(), randomnumber(), 50, 75, Math.PI / 4, 0, 2 * Math.PI);
-        crc2.strokeStyle = ("yellow");
+        crc2.fillStyle = "RGB(" + randomcolor + +randomcolor + randomcolor + ")";
         crc2.stroke();
         crc2.closePath();
     }
@@ -56,7 +56,7 @@ var Canvas;
         crc2.lineTo(randomnumber(), 75);
         crc2.lineTo(randomnumber(), 25);
         crc2.fill();
-        crc2.strokeStyle = ("yellow");
+        crc2.fillStyle = "RGB(" + randomcolor + +randomcolor + randomcolor + ")";
         crc2.stroke();
         crc2.closePath();
     }
